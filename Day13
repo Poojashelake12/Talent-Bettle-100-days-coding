@@ -1,0 +1,35 @@
+Day 13 coding Statement:  Write a program to find Sum of N natural numbers
+
+import java.util.*;
+class Main{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=1;i<=n;i++)
+        {
+           sum=sum+i; 
+        }
+        System.out.println(sum);
+    }
+}
+
+OR
+//using function
+class Main{
+    static int sumfind(int n)
+    {
+        int sum1=0;
+        for(int i=1;i<=n;i++){
+            sum1=sum1+i;
+        }
+        return sum1;
+    }
+    
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=sumfind(n);
+        System.out.println(sum);
+    }
+}
