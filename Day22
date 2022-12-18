@@ -1,0 +1,39 @@
+Day 22 coding Statement : Write a program to express a number as a sum of two prime numbers Description
+
+import java.util.*;
+class Main{
+ public static boolean isprime( int num){
+ boolean check=true;
+ for(int i=2;i<=num/2;i++)
+ {
+ if(num%i==0)
+ {
+ check=false;
+ break;
+ }
+ 
+ }
+return check 
+ }
+public static void main(String args[]){
+ Scanner sc=new Scanner(System.in);
+ int num=sc.nextInt();
+ boolean flag=false;int i;
+ for(i=2;i<=num/2;i++)
+ {
+ if(isprime(i)==true)
+ {
+ if(isprime(num-i)==true)
+ {
+ System.out.println(num+" can be expressed as sum of "+ i +" and "+(num-i));
+ flag=true;
+ }
+ }
+ }
+ if(flag==false)
+ {
+ System.out.println(num +" can not be expressed as sum of"+ i +" and "+(num-i));
+ }
+ 
+}
+}
