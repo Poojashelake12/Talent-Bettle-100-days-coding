@@ -1,0 +1,14 @@
+Day 29 coding Statement : Write a Program to concatenate a string.
+
+import java.util.*;
+class Main{
+ public static void main(String args[])
+ {
+ Scanner sc=new Scanner(System.in);
+ System.out.println("Enter first String");
+ String str1=sc.next();
+ System.out.println("Enter second String");
+ String str2=sc.next();
+ System.out.println(str1+""+str2); 
+ }
+}
