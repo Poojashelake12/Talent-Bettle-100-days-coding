@@ -1,0 +1,12 @@
+Day 34 coding Statement : Write a Program to Remove brackets from an algebraic expression.
+
+import java.util.*;
+class Main{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        String new_str=str.replaceAll("[(),{}]","");
+        System.out.println(new_str);
+    }
+}
