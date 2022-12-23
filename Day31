@@ -1,0 +1,13 @@
+Day 31 coding Statement : Write a Program to Toggle each character in a string.
+
+import java.util.*;
+class Main{
+ public static void main(String args[])
+ {
+ Scanner sc=new Scanner(System.in);
+ String str=sc.next();
+ String result=str.substring(0,1).toLowerCase()+str.substring(1).toUpperCase();
+ System.out.println(result);
+ 
+ }
+}
