@@ -1,0 +1,32 @@
+//Day 37 coding Statement : Write a Program to calculate the Frequency of characters in a string
+
+
+class Main{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int a[]=new int[26];
+        String str=sc.nextLine();
+        int size=str.length();
+        for(int i=0;i<size;i++)
+        {
+            if(str.charAt(i)>=65 && str.charAt(i)<=90)
+            {
+               a[str.charAt(i)-65]++;
+            }
+           else if(str.charAt(i)>=97 && str.charAt(i)<=122)
+           {
+               a[str.charAt(i)-97]++;
+           }
+       
+        }
+        for(int i=0;i<26;i++)
+        {
+            if(a[i]>0)
+            {
+                System.out.println("The frequency of "+(char)(i+97)+" is "+a[i]);
+            }
+        }
+    }
+}
+
