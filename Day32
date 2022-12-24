@@ -1,20 +1,15 @@
 
 DaY 32 coding Statement : Write a Program to Remove vowels from a string.
 
-import java.io.*;
+
 import java.util.*;
 class Main{
-    public static void main(String args[])throws IOException
+    public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
         String str=sc.next();
-        int size=str.length();
-       StringReader sr=new StringReader(str);
-        for(int i=0;i<size/2;i++)
-        {
-           char ch=(char)sr.read();
-           sr.skip(1);
-           System.out.print(ch);      
-        }
+        String str2="";
+        str2=str.replaceAll("[aeiou]","");
+        System.out.println(str2);
     }
 }
