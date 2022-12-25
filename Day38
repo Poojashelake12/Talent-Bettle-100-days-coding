@@ -1,0 +1,28 @@
+//Day 38 coding Statement : Write a Program to print Non-repeating characters in a string.
+
+import java.util.*;
+class Main{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        int a[]=new int[256];
+        int size=str.length();
+        for(int i=0;i<size;i++)
+        {
+            a[str.charAt(i)]++;
+            
+        }
+        for(int i=0;i<256;i++)
+        {
+            if(a[i]==1)
+            {
+                System.out.print((char)i);
+            }
+        }
+        
+        
+    }
+}
+
+
