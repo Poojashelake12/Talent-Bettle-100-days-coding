@@ -1,0 +1,33 @@
+//Day 44 coding Statement : Write Program to find number of even and odd elements in an array.
+
+import java.util.*;
+class Main{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of array");
+        int n=sc.nextInt();
+        System.out.println("Ente rthe element of array");
+        int[] arr=new int[n];
+        int even=0,odd=0;
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        
+        for(int i=0;i<n;i++)
+        {
+           if(arr[i]%2==0)
+           {
+               even=even+1;
+           }
+           else{
+               odd=odd+1;
+           }
+        }
+        System.out.println("Number of even elements:\n"+even);
+        System.out.println("Number of odd elements :\n"+odd);
+        
+    }
+}
+
