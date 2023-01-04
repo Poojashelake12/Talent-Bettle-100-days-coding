@@ -1,0 +1,66 @@
+Day 47 coding Statement : Write Program to find longest palindrome in an array.
+
+import java.util.*;
+class Main{
+    public static boolean isPalindrome(int n){
+        int rem,num,rev=0;
+        num=n;
+        while(n!=0)
+        {
+            rem=n%10;
+            rev=rev*10+rem;
+            n=n/10;
+        }
+        if(num==rev)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+    public static int longest(int arr[],int n)
+    {
+      for(int i=0;i<n;i++)
+      {
+          for(int j=0;j<n;j++)
+          {
+              if(arr[i]<arr[j])
+              {
+               int temp=arr[i];
+                  arr[i]=arr[j];
+                  arr[j]=temp;
+              }
+          }
+      }
+      for(int i=n-1;i>=0;i--)
+      {
+          if(isPalindrome(arr[i]))
+              return arr[i];
+      }
+      return -1;
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of array");
+        int n=sc.nextInt();
+        
+        int arr[]=new int[n];
+        System.out.println("Enter the element of array:");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int larger=longest(arr,n);
+        if(larger==-1)
+             System.out.println("There is no palindrome number in the array");
+        else
+           System.out.println(larger);
+    }
+}
+
+
+
+
