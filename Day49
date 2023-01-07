@@ -1,0 +1,45 @@
+
+//Day 49 coding Statement : Given 2 integer arrays X and Y of same size. Consider both arrays as vectors and print the minimum scalar product (Dot product) of 2 vectors.
+
+import java.util.*;
+class Main{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of array:");
+        int n=sc.nextInt();
+       
+        int a[] = new int[n];
+        int b[] = new int[n];
+        int c[] = new int[n];
+        int sum=0,j;
+        System.out.println("Enter the element of first array:");
+        for(int i=0;i<n;i++)
+        {
+           a[i]=sc.nextInt(); 
+        }
+        System.out.println("Enter the element of second array:");
+        for(int i=0;i<n;i++)
+        {
+            b[i]=sc.nextInt();
+        }
+        
+        for(int i=0;i<n;i++)
+        {
+            c[i]=b[n-i-1];
+        }
+        for(int i=0;i<n;i++)
+        {
+            int result=a[i]*c[i];
+            sum=sum+result;
+        }
+        System.out.println(sum);
+    }
+}
+Output:
+Enter the size of array:
+4
+Enter the element of first array:
+-1 -2 -3 -4
+Enter the element of second array:
+5 6 -7 -8
+-16
