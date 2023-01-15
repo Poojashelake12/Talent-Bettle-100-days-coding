@@ -1,0 +1,71 @@
+//Day 56 coding Statement : Write Program to find whether the numbers of an array be made equal
+
+import java.util.*;
+class Main{
+    static boolean convert(int b[],int n)
+    {
+       for(int i=0;i<n;i++)
+        {
+           
+        while(b[i]%2==0 )
+        {
+           b[i]/=2;
+        }
+         while(b[i]%3==0 )
+        {
+           b[i]/=3;
+        }
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(b[i]!=b[0])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of array");
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        System.out.println("Enter the element of array");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        if(convert(arr,n))
+        {
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+       }
+}
+
+Output:
+Enter the size of array
+3
+Enter the element of array
+50 75 150
+Yes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
